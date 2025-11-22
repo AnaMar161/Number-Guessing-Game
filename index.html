@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+        <title>Number Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  </head>
+
+  <body class=" flex flex-col bg-black text-white">
+    <!-- HEADER -->
+    <header class="relative inset-x-0 top-0 flex bg-cyan-500 border-b border-blue-500 py-4">
+      <div  class="max-w-7xl mx-auto px-20 flex flex-col items-center justify-between">
+        <h1>
+        <a href="#" class="text-4xl text-auto-center font-extrabold text-white"
+          >Number Guessing Game: Practice your divinatory skills!</a
+        </h1>
+      </div>
+    </header>
+  
+         <!--  MAIN CONTENT -->
+    <main>
+
+<section class="flex flex col py-7 px-4">
+        <div
+          class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center md:gap-20"
+        >  <article class="space-y-5 md:max-w-xl flex flex-col text-center md:text-left">
+           
+          <figure>
+            <img
+              src="https://media.istockphoto.com/id/1361321300/de/foto/numerologie-ein-junges-m%C3%A4dchen-faltete-ihre-h%C3%A4nde-in-form-eines-herzens-vor-dem-hintergrund.jpg?s=1024x1024&w=is&k=20&c=kXwkx-WjnQMdB12We8UrY3t55rvjSnt-653mtPF2CbU="
+              alt="Number divination"
+              class="w-auto max-w-md flex flex-col rounded-xl shadow-lg mx-auto"
+            />
+          </figure>
+            <p class="text-cyan-500 text-bold text-base text-center md:text-lg">
+              Guess a number between 1 and 100 and see your result! 
+            </p>
+
+ <form id="calcForm" class="flex flex-col gap-4 w-full w-auto max-w-sm p-4 bg-white rounded-lg shadow-md items-center mx-auto">
+    <!-- ---------- Input + Button ---------- -->
+    <div class="w-auto max-w-md flex flex-wrap gap-2 items-center mx-auto">
+      <label class="sr-only" for="numInput">Enter your guess</label>
+           <input
+        id="numInput"
+        name="numInput"
+        type="number"
+        placeholder="Enter your guess!"
+        class="
+          flex-1
+          w-maxscreen
+          px-3 py-2
+          border border-gray-300
+          rounded-md
+          shadow-sm
+          focus:outline-none
+          focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+          hover:border-gray-400
+          transition
+          duration-150 ease-in-out
+          text-gray-900
+          bg-white
+        "
+        required
+      />
+      <button
+        type="submit"
+        class="
+         px-4 py-2
+          bg-indigo-600
+          text-white
+          font-medium
+          rounded-md
+          hover:bg-indigo-700
+          focus:outline-none
+          focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+          transition
+          duration-150 ease-in-out
+        "
+      >Submit</button>
+    </div>
+
+    <!-- ---------- Result Output Field ---------- -->
+    <div
+      id="resultBox"
+      class="
+        hidden               /* start hidden */
+        p-3
+        border-l-4 border-indigo-500
+        bg-indigo-50
+        text-indigo-800
+        rounded-md
+        break-all
+      "
+    >
+      <!-- Result will be injected here -->
+    </div>
+  </form>
+        </article>
+      </div>
+    </section>
+
+
+
+    </main>
+
+
+    <!--  FOOTER -->
+    <footer
+      class="bg-cyan-500 text-white py-4 px-6
+                 flex flex-col sm:flex-row items-center
+                 justify-between
+                 sticky inset-x-0 bottom-0
+                 w-full
+                 shadow-inner">
+    <!-- Left side – usually copyright / brand -->
+    <div class="text-sm flex-box w-full">
+      <p class="float-left">
+       <a href="#" class="hover:underline">Contact</a>
+       </p>
+       <p class="float-right">
+      © 2025 Number Guessing Game by Anastasia. All rights reserved.
+      </p>
+    </div>
+      
+    </footer>
+  </body>
+
+</html>
