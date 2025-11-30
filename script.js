@@ -9,20 +9,20 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // -----------------------------------------------------------------
-  // 1️⃣ Grab the elements we need only once
+  // Grab the elements we need only once
   // -----------------------------------------------------------------
   const form      = document.getElementById('calcForm');
   const numInput  = document.getElementById('numInput');
   const resultBox = document.getElementById('resultBox');
 
   // -----------------------------------------------------------------
-  // 2️⃣ Helper: generate a random integer inclusive of both bounds
+  // Generate a random integer inclusive of both bounds
   // -----------------------------------------------------------------
   const randomInt = (min = 1, max = 100) =>
     Math.floor(Math.random() * (max - min + 1)) + min;
 
   // -----------------------------------------------------------------
-  // 3️⃣ Validation routine – returns true if the value is an integer
+  // Validation routine – returns true if the value is an integer
   //    between 1 and 100 (inclusive)
   // -----------------------------------------------------------------
   const isValidGuess = (value) => {
@@ -31,14 +31,14 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   // -----------------------------------------------------------------
-  // 4️⃣ Form submit handler – core game logic
+  // Form submit handler – core logic
   // -----------------------------------------------------------------
   form.addEventListener('submit', (e) => {
     e.preventDefault(); // stop the page from reloading
 
     const userValue = numInput.value.trim();
 
-    // ---- 4a. Validate ------------------------------------------------
+    // ---- Validate ------------------------------------------------
     if (!isValidGuess(userValue)) {
       resultBox.textContent = 'Please enter an integer between 1 and 100.';
       resultBox.classList.remove('hidden');
@@ -52,12 +52,12 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // ---- 4b. Core game ------------------------------------------------
+    // ---- Core game ------------------------------------------------
     const guess   = Number(userValue);
     const random  = randomInt(1, 100);
     const success = guess === random;
 
-    // ---- 4c. Show result -----------------------------------------------
+    // ---- Show result -----------------------------------------------
     resultBox.textContent = success ? 'True' : 'False';
     resultBox.classList.remove('hidden');
 
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // -----------------------------------------------------------------
-  // 5️⃣ Optional: live validation while the user types (nice UX)
+  // Live validation while the user types
   // -----------------------------------------------------------------
   numInput.addEventListener('input', () => {
     const val = numInput.value;
